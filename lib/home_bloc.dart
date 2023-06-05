@@ -11,7 +11,7 @@ class HomeBloc extends Cubit<HomeStateInitial> {
   }
 
   void decrement() {
-    if (state.counter > 0) {
+    if (state.counter < 1) {
       return;
     }
     emit(HomeStateInitial(counter: state.counter - 1, url: state.url));
